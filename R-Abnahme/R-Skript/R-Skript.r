@@ -1,8 +1,8 @@
-#Initialisieren der cbenötigten Lybraries!
+#Initialisieren der benötigten Lybraries!
 library(edgeR)
 library(shiny)
 library(pheatmap)
-#Vorbereiten und Filtern des Datensatzes auf die 500 am stärksten differenziell exprimierten Gene!
+#Vorbereiten und Filtern des Datensatzes auf die 50 am stärksten differenziell exprimierten Gene!
 data <- read.table("data/Mov10_full_counts.txt",header=T, row.names = 1)
 logcounts <- cpm(data)
 var_genes <- apply(logcounts,1,var)
